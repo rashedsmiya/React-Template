@@ -39,7 +39,7 @@ export default function HeroSection() {
             <motion.div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: 'url(/images/home/bg_hero.png)',
+                    backgroundImage: 'url(/assets/images/home/bg_hero.png)',
                 }}
                 initial={{ scale: 1.15, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
