@@ -6,7 +6,9 @@ import FrontendLayout from '@/layouts/frontend-layout';
 import HowItWorksSection from '@/components/frontend/home/how-it-works-section';
 import BringPracticeOnlineSection from '@/components/frontend/home/bring-practice-online-section';
 import CategoriesSection from '@/components/frontend/home/categories-section';
-
+import MeetOperatorsSection from '@/components/frontend/home/meet-operators-section';
+import TestimonialSection from '@/components/frontend/home/testimonial-section';
+import ReadyCtaSection from '@/components/frontend/home/ready-cta-section';
 export default function Home() {
     return (
         <FrontendLayout>
@@ -16,6 +18,9 @@ export default function Home() {
             <HowItWorksSection />
             <BringPracticeOnlineSection />
             <CategoriesSection />
+            <MeetOperatorsSection />
+            <TestimonialSection />
+            <ReadyCtaSection />
              
             {/* <PractitionerCtaSection /> */}
         </FrontendLayout>
