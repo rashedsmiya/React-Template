@@ -1,0 +1,19 @@
+import { Head } from '@inertiajs/react';
+
+
+import HeroSection from '@/components/frontend/home/hero-section';
+import FrontendLayout from '@/layouts/frontend-layout';
+import HowItWorksSection from '@/components/frontend/home/how-it-works-section';
+
+export default function Home() {
+    return (
+        <FrontendLayout>
+            <Head title="Home Page" />
+
+            <HeroSection />
+            <HowItWorksSection />
+             
+            {/* <PractitionerCtaSection /> */}
+        </FrontendLayout>
+    );
+}
