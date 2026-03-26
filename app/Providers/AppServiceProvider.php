@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -25,6 +25,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        $this->registerGates();
+    }
+
+    protected function registerGates(): void
+    {
+        // Allow role switching for all authenticated users
+        // In production, you may want to restrict this further
+        Gate::define('role.switch', function ($user) {
+            return true;
+        });
     }
 
     protected function configureDefaults(): void

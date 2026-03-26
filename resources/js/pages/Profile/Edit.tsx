@@ -44,7 +44,7 @@ export default function EditProfile({ user }: Props) {
 
     const submit = (e: React.FormEvent) => {
         e.preventDefault();
-        post(route('user-profile.update'), {
+        post(route('user.profile.update'), {
             forceFormData: true,
             onSuccess: () => {
                 toast.success('Profile updated successfully!');
