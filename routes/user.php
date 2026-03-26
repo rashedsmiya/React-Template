@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\User\UserDashboard\DashboardController;
+use App\Http\Controllers\Backend\User\UserDashboard\MyConsultationsController;
 use App\Http\Controllers\Backend\User\UserDashboard\MyLearningController;
 use App\Http\Controllers\Backend\User\UserDashboard\UserRoleController;
 use App\Http\Controllers\UserProfileController;
@@ -15,6 +16,7 @@ Route::middleware(['auth', 'verified'])->prefix('user')->name('user.')->group(fu
     Route::get('/my-learning/courses/{course}', [MyLearningController::class, 'show'])->name('my-account.courses.show');
     Route::get('/my-learning/courses/{course}/lesson', [MyLearningController::class, 'lesson'])->name('my-learning.course.lesson');
     Route::post('/my-learning/courses/{course}/review', [MyLearningController::class, 'submitReview'])->name('my-learning.course.review.submit');
+    Route::get('/my-consultations', [MyConsultationsController::class, 'index'])->name('my-consultations');
     // Profile Routes
     Route::get('/profile', [UserProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');

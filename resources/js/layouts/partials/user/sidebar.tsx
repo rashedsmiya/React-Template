@@ -63,7 +63,7 @@ export function UserSidebar({
         ? 'Dashboard'
         : url.startsWith('/user/my-learning')
             ? 'My Learning'
-            : url.startsWith('/user/my-account/consultations')
+            : url.startsWith('/user/my-consultations')
                 ? 'My Consultations'
                 : url.startsWith('/user/my-account/podcast')
                     ? 'My Podcasts'
@@ -97,9 +97,9 @@ export function UserSidebar({
         },
         {
             title: 'My Consultations',
-            href: '#',
+            href: '/user/my-consultations',
             icon: CalendarDays,
-            isActive: url.startsWith('/user/my-account/consultations'),
+            isActive: url.startsWith('/user/my-consultations'),
         },
         {
             title: 'My Podcasts',
